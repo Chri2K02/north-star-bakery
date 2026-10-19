@@ -1,0 +1,378 @@
+/* ==========================================================
+   North Star Bakery - Main Stylesheet
+   Mobile-first: base styles are for small screens, and the
+   media queries at the bottom adjust the layout for larger ones.
+
+   Color palette (4 colors):
+     Cream     #FFF8EE  - page and card background
+     Espresso  #3B2316  - body text, header, and footer
+     Rust      #A4471C  - section headings, links, and buttons
+     Honey     #F2C46D  - accents, borders, and highlight boxes
+
+   Fonts (2 families):
+     Lora       - headings (warm, handmade serif)
+     Open Sans  - body text, navigation, and form (easy-to-read sans-serif)
+   ========================================================== */
+
+/* ---------- Base styles ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FFF8EE;
+    color: #3B2316;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Images and media shrink to fit their container on small screens */
+img,
+video,
+audio {
+    max-width: 100%;
+    height: auto;
+}
+
+img,
+video {
+    display: block;
+    border-radius: 8px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2 {
+    font-family: "Lora", Georgia, serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+}
+
+h2 {
+    color: #A4471C;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 0.75rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: #A4471C;
+    font-weight: 600;
+}
+
+a:hover,
+a:focus {
+    color: #3B2316;
+}
+
+/* ---------- Header and navigation ---------- */
+.site-header {
+    background-color: #3B2316;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;     /* logo above the menu on phones */
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 4px solid #F2C46D;
+}
+
+.logo-link img {
+    width: 120px;
+    border-radius: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;            /* links wrap onto a second line if needed */
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.5rem 0.6rem;
+    color: #FFF8EE;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: #F2C46D;
+    color: #3B2316;
+}
+
+/* Shows visitors which page they are on */
+.main-nav a[aria-current="page"] {
+    color: #F2C46D;
+    border-bottom: 3px solid #F2C46D;
+    border-radius: 6px 6px 0 0;
+}
+
+/* ---------- Main content area ---------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+}
+
+/* Cards group related content into clear, scannable blocks */
+.card {
+    background-color: #FFF8EE;
+    border: 2px solid #F2C46D;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.card img,
+.card video,
+.card picture {
+    margin-bottom: 1rem;
+}
+
+/* Highlight boxes for key details like hours and location */
+.highlight {
+    background-color: #F2C46D;
+    border-color: #F2C46D;
+}
+
+.highlight h2,
+.highlight a {
+    color: #3B2316;
+}
+
+/* Rows of cards stack on phones and sit side by side on wider screens */
+.card-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-row .card {
+    margin-bottom: 0;
+}
+
+/* ---------- Figure and captions ---------- */
+figure {
+    margin: 0 0 1rem;
+}
+
+figcaption {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* ---------- Lists ---------- */
+.card ul {
+    padding-left: 1.25rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: 600;
+    color: #A4471C;
+}
+
+.card .staff-list,
+.card .hours-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.staff-list li {
+    border-left: 4px solid #F2C46D;
+    padding-left: 0.75rem;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    display: inline-block;
+    background-color: #A4471C;
+    color: #FFF8EE;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #3B2316;
+    color: #FFF8EE;
+}
+
+/* ---------- Form ---------- */
+fieldset {
+    border: 2px solid #F2C46D;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0 0 1.25rem;
+}
+
+legend {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    color: #3B2316;
+    background-color: #FFF8EE;
+    border: 2px solid #3B2316;
+    border-radius: 6px;
+}
+
+/* Clear focus outline for keyboard users */
+input:focus,
+select:focus,
+textarea:focus,
+.button:focus,
+a:focus {
+    outline: 3px solid #A4471C;
+    outline-offset: 2px;
+}
+
+/* Remove the extra line breaks between labels and text areas */
+.form-card br {
+    display: none;
+}
+
+/* ---------- Contact page layout ---------- */
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-layout .card {
+    margin-bottom: 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background-color: #3B2316;
+    color: #FFF8EE;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    border-top: 4px solid #F2C46D;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ==========================================================
+   Tablet and larger screens (768px and up)
+   ========================================================== */
+@media (min-width: 768px) {
+    .site-header {
+        flex-direction: row;            /* logo on the left, menu on the right */
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .logo-link img {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding: 2.5rem 2rem 3rem;
+    }
+
+    .card-row {
+        flex-direction: row;            /* cards sit side by side */
+        flex-wrap: wrap;                /* extra cards move to a new row */
+        align-items: stretch;
+    }
+
+    .card-row .card {
+        flex: 1 1 300px;                /* equal share, but never narrower than 300px */
+    }
+
+    .main-nav ul {
+        gap: 0.5rem;
+    }
+
+    .main-nav a {
+        padding: 0.5rem 0.9rem;
+    }
+
+    .card {
+        padding: 1.75rem;
+    }
+}
+
+/* ==========================================================
+   Desktop screens (1000px and up)
+   ========================================================== */
+@media (min-width: 1000px) {
+    .contact-layout {
+        flex-direction: row;            /* form on the left, info on the right */
+        align-items: flex-start;
+    }
+
+    .form-card {
+        flex: 2;
+    }
+
+    .contact-info {
+        flex: 1;
+    }
+}
