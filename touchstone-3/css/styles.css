@@ -30,8 +30,7 @@ body {
 
 /* Images and media shrink to fit their container on small screens */
 img,
-video,
-audio {
+video {
     max-width: 100%;
     height: auto;
 }
@@ -43,7 +42,9 @@ video {
 }
 
 audio {
+    display: block;
     width: 100%;
+    max-width: 100%;
     margin-top: 0.5rem;
 }
 
@@ -94,7 +95,7 @@ a:focus {
 
 .logo-link img {
     width: 120px;
-    border-radius: 0;
+    border-radius: 8px;
 }
 
 .main-nav ul {

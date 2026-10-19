@@ -14,7 +14,7 @@ Client website for **Client A: North Star Bakery**, built for Introduction to We
 - `contact.html`: Pre-order and inquiry form, location, and hours
 
 ## Media
-Both versions load their images, audio, and video from a `media/` folder next to the HTML files. Add the course-provided bakery media files to `touchstone-2/media/` and `touchstone-3/media/`.
+Both versions load their images, audio, and video from their own `media/` folder. These are the course-provided North Star Bakery files. The behind-the-scenes video was re-encoded to 720p (from a 99 MB original to 1.7 MB) so it loads quickly on the web.
 
 ## Design (Touchstone 3)
 - **Colors:** Cream `#FFF8EE`, Espresso `#3B2316`, Rust `#A4471C`, Honey `#F2C46D`
