@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse North Star Bakery's breads, pastries, and cakes, with price ranges for each category.">
+    <title>North Star Bakery | Products</title>
+    <link rel="icon" type="image/png" href="media/bakery-logo_c.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo-link"><img src="media/bakery-logo_c.png" alt="North Star Bakery logo, return to home page" width="150"></a>
+        <nav aria-label="Main navigation" class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" aria-current="page">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our Products</h1>
+        <p>Everything on our shelves is baked fresh each morning. Prices below are general ranges. Use the "Add to my list" buttons to build a pre-order list, and we will add it to your <a href="contact.html">pre-order request form</a> for you.</p>
+
+        <section class="card preorder-list" id="preorder-list" aria-labelledby="list-heading">
+            <h2 id="list-heading">My Pre-Order List</h2>
+            <p id="list-empty">Your list is empty. Choose "Add to my list" next to any item below to start your order.</p>
+            <ul id="list-items" class="list-items"></ul>
+            <p id="list-total" class="list-total"></p>
+            <div class="list-actions" id="list-actions">
+                <a href="contact.html" class="button" id="list-continue">Request These Items</a>
+                <button type="button" class="button button-secondary" id="list-clear">Clear List</button>
+            </div>
+            <p id="list-status" class="list-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <div class="card-row">
+        <section class="card">
+            <h2>Breads</h2>
+            <figure>
+                <img src="media/bakery-signature-loaf_c.png" alt="North Star Signature Loaf, a dark, round sourdough dusted with flour and wrapped in a checked linen towel" width="600">
+                <figcaption>Our Signature Loaf: a naturally leavened sourdough with a deep, crackly crust, fermented for 24 hours.</figcaption>
+            </figure>
+            <img src="media/bakery-bread_c.png" alt="An assortment of crusty sourdough and seeded loaves in a glass display case" width="600">
+            <ul>
+                <li class="product-item"><strong>Signature Sourdough Loaf:</strong> Our most popular bread, with a chewy crumb and crisp crust.
+                    <button type="button" class="add-btn" data-product="signature-sourdough">Add to my list</button>
+                </li>
+                <li class="product-item"><strong>Whole Wheat Sandwich Bread:</strong> Soft and hearty, perfect for school lunches.
+                    <button type="button" class="add-btn" data-product="whole-wheat">Add to my list</button>
+                </li>
+                <li class="product-item"><strong>Rosemary Focaccia:</strong> Topped with olive oil, sea salt, and fresh rosemary.
+                    <button type="button" class="add-btn" data-product="rosemary-focaccia">Add to my list</button>
+                </li>
+            </ul>
+            <p class="price">Price range: $6 to $12 per loaf</p>
+        </section>
+
+        <section class="card">
+            <h2>Pastries</h2>
+            <ul>
+                <li class="product-item"><strong>Butter Croissants:</strong> Flaky, golden, and made with real butter.
+                    <button type="button" class="add-btn" data-product="butter-croissant">Add to my list</button>
+                </li>
+                <li class="product-item"><strong>Seasonal Fruit Scones:</strong> Made with local fruit when it is in season.
+                    <button type="button" class="add-btn" data-product="fruit-scone">Add to my list</button>
+                </li>
+                <li class="product-item"><strong>Cinnamon Swirl Buns:</strong> Finished with a vanilla glaze.
+                    <button type="button" class="add-btn" data-product="cinnamon-bun">Add to my list</button>
+                </li>
+            </ul>
+            <p class="price">Price range: $3 to $6 each, or $30 to $55 per dozen</p>
+        </section>
+
+        <section class="card">
+            <h2>Cakes</h2>
+            <ul>
+                <li class="product-item"><strong>Celebration Cakes:</strong> Custom layer cakes for birthdays, showers, and anniversaries.
+                    <button type="button" class="add-btn" data-product="celebration-cake">Add to my list</button>
+                </li>
+                <li class="product-item"><strong>Event and Office Cakes:</strong> Sheet cakes for meetings, parties, and community events.
+                    <button type="button" class="add-btn" data-product="event-cake">Add to my list</button>
+                </li>
+                <li class="product-item"><strong>Mini Cakes:</strong> Single-serving cakes for small celebrations.
+                    <button type="button" class="add-btn" data-product="mini-cake">Add to my list</button>
+                </li>
+            </ul>
+            <p class="price">Price range: $8 for mini cakes to $90 for large custom cakes</p>
+            <p>Custom cakes need at least 48 hours' notice. Please mention any allergies in your <a href="contact.html">order request</a>.</p>
+        </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 North Star Bakery. Baked with care in our neighborhood.</p>
+    </footer>
+    <script src="js/shared.js"></script>
+    <script src="js/preorder.js"></script>
+</body>
+</html>
